@@ -1,0 +1,27 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": ["Phishing", "Credential Harvesting", "Privilege Escalation"],
+    "hidden_objectives": ["Steal admin credentials", "Gain higher privileges"],
+    "expected_findings": [
+        "Failed login attempts in /var/log/auth.log",
+        "Suspicious commands in system logs",
+        "Unusual account activity",
+        "Elevated privileges for a user account"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "last",
+        "id -a",
+        "sudo -l"
+    ],
+    "expected_root_cause": "Weak password policy exploited through phishing",
+    "expected_severity": "Medium",
+    "expected_mitigation": [
+        "Enforce strong password policies",
+        "Provide security awareness training",
+        "Disable unnecessary user accounts",
+        "Implement multi-factor authentication"
+    ]
+}

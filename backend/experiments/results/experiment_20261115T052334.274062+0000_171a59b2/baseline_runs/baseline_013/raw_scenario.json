@@ -1,0 +1,37 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Recon",
+    "Exploit Zero-Day Vulnerability",
+    "Backdoor Installation",
+    "Lateral Movement",
+    "Data Exfiltration",
+    "Cover-Up"
+  ],
+  "hidden_objectives": [
+    "Steal confidential project files",
+    "Persist within the network undetected"
+  ],
+  "expected_findings": [
+    "Unusual network traffic patterns",
+    "Unrecognized processes running",
+    "Modified system files",
+    "Unexplained data transfers"
+  ],
+  "expected_commands": [
+    "netstat -tulnp",
+    "ps aux | grep -i backdoor",
+    "ls -l /root/",
+    "grep -i data /var/log/syslog",
+    "tcpdump -i eth0 -w output.pcap"
+  ],
+  "expected_root_cause": "Exploitation of an unpatched zero-day vulnerability",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Regular system updates and patches",
+    "Network segmentation",
+    "Implementing a strong incident response plan",
+    "Monitoring for signs of data exfiltration"
+  ]
+}

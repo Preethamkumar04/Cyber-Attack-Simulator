@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DOCKER_ENABLED: ${DOCKER_ENABLED:-false}
+      ATTACK_ENGINE: ${ATTACK_ENGINE:-mock}
+      DOCKER_LAB_CONTEXT: /lab-context
+      OLLAMA_URL: http://host.docker.internal:11434
+      OLLAMA_MODEL: mistral
+    volumes:
+      - ./logs:/app/logs
+      - ./backend/cyber.db:/app/cyber.db
+      - ./docker/lab:/lab-context:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

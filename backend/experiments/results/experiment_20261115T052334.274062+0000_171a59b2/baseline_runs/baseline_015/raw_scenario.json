@@ -1,0 +1,40 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Initial Foothold (Web Application Exploitation)",
+    "Persistence (Web Shell Installation)",
+    "Lateral Movement (SSH Credential Dump)",
+    "Privilege Escalation (SUID Root Shell)",
+    "Data Exfiltration (Scheduled Crontab Transfer)",
+    "Exit Strategy (Cleanup and Cover Tracks)"
+  ],
+  "hidden_objectives": [
+    "Steal admin credentials",
+    "Exfiltrate sensitive company data"
+  ],
+  "expected_findings": [
+    "Web application logs showing exploitation",
+    "Persistent shell sessions",
+    "SSH credentials in memory",
+    "Elevated permissions for a shell",
+    "Crontab entries for data exfiltration",
+    "System files modified or deleted"
+  ],
+  "expected_commands": [
+    "grep 'exploit' /var/log/httpd/*",
+    "netstat -tuln",
+    "sudo -l",
+    "ls -l /usr/local/bin",
+    "crontab -l",
+    "diff -r /etc/cron.* /etc/cron.bak.*"
+  ],
+  "expected_root_cause": "Unpatched web application vulnerability exploited by attackers",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Patch all web applications",
+    "Implement multi-factor authentication for SSH",
+    "Monitor system files for unauthorized changes",
+    "Regularly backup and verify crontab entries"
+  ]
+}

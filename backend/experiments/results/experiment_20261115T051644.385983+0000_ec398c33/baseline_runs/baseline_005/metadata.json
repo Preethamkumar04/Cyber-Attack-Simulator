@@ -1,0 +1,17 @@
+{
+  "request": {
+    "model_response_time_ms": 1.736,
+    "http_ok": false,
+    "raw_response": null,
+    "ollama_metadata": {},
+    "request_error": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))"
+  },
+  "external_evaluation": {
+    "valid": false,
+    "errors": [
+      "JSON value is not an object"
+    ],
+    "attack_chain_length": null
+  },
+  "raw_payload": null
+}

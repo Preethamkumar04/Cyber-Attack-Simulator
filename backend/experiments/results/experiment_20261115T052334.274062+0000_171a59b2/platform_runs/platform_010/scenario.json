@@ -1,0 +1,47 @@
+{
+  "scenario_id": "5e422d64-3ed2-4d59-aa31-133a60ed9f2b",
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Recon",
+    "Phishing",
+    "Credential Harvesting",
+    "Privilege Escalation",
+    "Lateral Movement",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal admin credentials",
+    "Gain access to the HR system",
+    "Move through the network undetected"
+  ],
+  "expected_findings": [
+    "Multiple failed login attempts",
+    "Suspicious network traffic",
+    "Newly created admin user",
+    "File transfer activity",
+    "Access to sensitive files in the HR system"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "sudo -l",
+    "who",
+    "find / -user admin -mtime 0",
+    "cat /etc/passwd",
+    "ls -la /home/admin",
+    "grep -i 'exfiltrate' /home/admin/.bash_history",
+    "tcpdump -i eth0 -w /root/network_dump.pcap"
+  ],
+  "expected_root_cause": "Phishing email with a malicious attachment allowed an attacker to gain initial access and escalate privileges",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Regularly update and patch systems",
+    "Educate employees about phishing attacks",
+    "Monitor network traffic for suspicious activity",
+    "Limit user privileges and enforce least privilege principle"
+  ],
+  "simulation_ready": true
+}

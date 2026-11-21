@@ -1,0 +1,101 @@
+{
+  "run": {
+    "run_id": "platform_014",
+    "requested_difficulty": "ADVANCED",
+    "requested_attack_mode": "model_selected",
+    "scenario_uuid": null,
+    "attack_mode": null,
+    "attempt_count": 3,
+    "retry_count": 2,
+    "first_attempt_schema_valid": false,
+    "first_attempt_external_valid": false,
+    "final_structural_valid": false,
+    "final_generation_failure": true,
+    "failure_reason": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+    "model_response_time_ms": 43.279,
+    "parse_and_schema_time_ms": 0.002,
+    "builder_validation_time_ms": 0.0,
+    "retry_wait_time_ms": 3016.027,
+    "total_generation_time_ms": 3059.43,
+    "attack_chain_length": null,
+    "first_attempt_ollama_metadata": "{}",
+    "created_at": "2026-11-15T05:17:27.525469+00:00",
+    "simulation_attempted": false,
+    "simulation_success": null,
+    "simulation_time_ms": null,
+    "simulation_error": null
+  },
+  "attempts": [
+    {
+      "model_response_time_ms": 2.061,
+      "http_ok": false,
+      "raw_response": null,
+      "ollama_metadata": {},
+      "request_error": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "run_id": "platform_014",
+      "attempt_number": 1,
+      "requested_difficulty": "ADVANCED",
+      "parse_and_schema_time_ms": 0.0,
+      "parse_ok": false,
+      "schema_validation_ok": false,
+      "failure_reason": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "external_evaluation": {
+        "valid": false,
+        "errors": [
+          "JSON value is not an object"
+        ],
+        "attack_chain_length": null
+      },
+      "raw_response_path": "F:\\Cyber_Attack_Simulator (cur)\\Cyber_Attack_Simulator\\backend\\experiments\\results\\experiment_20261115T051644.385983+0000_ec398c33\\platform_runs\\platform_014\\attempt_01_raw.txt"
+    },
+    {
+      "model_response_time_ms": 2.403,
+      "http_ok": false,
+      "raw_response": null,
+      "ollama_metadata": {},
+      "request_error": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "run_id": "platform_014",
+      "attempt_number": 2,
+      "requested_difficulty": "ADVANCED",
+      "parse_and_schema_time_ms": 0.001,
+      "parse_ok": false,
+      "schema_validation_ok": false,
+      "failure_reason": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "external_evaluation": {
+        "valid": false,
+        "errors": [
+          "JSON value is not an object"
+        ],
+        "attack_chain_length": null
+      },
+      "raw_response_path": "F:\\Cyber_Attack_Simulator (cur)\\Cyber_Attack_Simulator\\backend\\experiments\\results\\experiment_20261115T051644.385983+0000_ec398c33\\platform_runs\\platform_014\\attempt_02_raw.txt"
+    },
+    {
+      "model_response_time_ms": 38.815,
+      "http_ok": false,
+      "raw_response": null,
+      "ollama_metadata": {},
+      "request_error": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "run_id": "platform_014",
+      "attempt_number": 3,
+      "requested_difficulty": "ADVANCED",
+      "parse_and_schema_time_ms": 0.001,
+      "parse_ok": false,
+      "schema_validation_ok": false,
+      "failure_reason": "ConnectionError: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions\"))",
+      "external_evaluation": {
+        "valid": false,
+        "errors": [
+          "JSON value is not an object"
+        ],
+        "attack_chain_length": null
+      },
+      "raw_response_path": "F:\\Cyber_Attack_Simulator (cur)\\Cyber_Attack_Simulator\\backend\\experiments\\results\\experiment_20261115T051644.385983+0000_ec398c33\\platform_runs\\platform_014\\attempt_03_raw.txt"
+    }
+  ],
+  "raw_payload": null,
+  "simulation": {
+    "attempted": false,
+    "reason": "Final structural validation failed"
+  }
+}

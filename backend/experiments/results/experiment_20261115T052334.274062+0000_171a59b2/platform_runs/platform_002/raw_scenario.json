@@ -1,0 +1,34 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Password Cracking",
+    "Unauthorized Access",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal admin credentials",
+    "Exfiltrate sensitive documents"
+  ],
+  "expected_findings": [
+    "Failed login attempts in /var/log/auth.log",
+    "Accounts with cracked passwords",
+    "Unusual file transfers from compromised account"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "crackmapexec smb -u <compromised_user> -p <cracked_password> -M john --format=csv",
+    "find / -user <compromised_user> -type f -size +100k -print"
+  ],
+  "expected_root_cause": "Weak passwords",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement password policies",
+    "Enable multi-factor authentication",
+    "Regularly change admin credentials"
+  ]
+}

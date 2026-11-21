@@ -1,0 +1,38 @@
+{
+  "scenario_id": "8d2ad6b8-4e46-4a14-8863-b45445f13850",
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Recon",
+    "Vulnerability Scanning",
+    "Exploitation",
+    "Lateral Movement",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal sensitive data from HR database",
+    "Persist within the network"
+  ],
+  "expected_findings": [
+    "Multiple failed SSH login attempts",
+    "Anomalous network traffic to external IP addresses",
+    "Unusual process running on a non-standard port",
+    "Modified HR database access logs"
+  ],
+  "expected_commands": [
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "ss -an",
+    "cat /var/log/syslog | grep 'process_name'",
+    "diff /var/www/html/hr_database/data.csv /path/to/backup/hr_database/data.csv"
+  ],
+  "expected_root_cause": "Exploitation of an unpatched vulnerability on a web server",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Apply patches to all servers",
+    "Implement a strong password policy",
+    "Monitor network traffic for anomalies",
+    "Restrict access to sensitive data"
+  ],
+  "simulation_ready": true
+}

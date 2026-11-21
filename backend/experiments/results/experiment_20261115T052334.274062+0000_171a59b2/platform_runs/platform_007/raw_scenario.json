@@ -1,0 +1,41 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Reconnaissance",
+    "Exploit Vulnerability",
+    "Privilege Escalation",
+    "Data Exfiltration",
+    "Maintain Persistence"
+  ],
+  "hidden_objectives": [
+    "Steal trade secrets from the R&D department",
+    "Gain admin privileges on the main server"
+  ],
+  "expected_findings": [
+    "Failed login attempts on the main server",
+    "Suspicious network traffic to a foreign IP",
+    "Modified system files related to user privileges",
+    "Files transferred from the company's network",
+    "Presence of a persistent backdoor"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "ls -la /root",
+    "strings /root/hiddenfile",
+    "cat /root/.ssh/known_hosts",
+    "tcpdump -i eth0",
+    "ssh -i /root/.ssh/backdoored_key user@remote_server"
+  ],
+  "expected_root_cause": "Unpatched vulnerability in a popular CMS system",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Apply patches for identified vulnerabilities",
+    "Rotate admin credentials",
+    "Monitor outgoing traffic for signs of data exfiltration",
+    "Investigate and remove any found persistent backdoors",
+    "Implement a stricter password policy"
+  ]
+}

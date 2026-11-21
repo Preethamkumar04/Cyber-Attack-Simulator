@@ -1,0 +1,31 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "INTERMEDIATE",
+    "attack_chain": ["Recon", "Phishing", "Credential Harvesting", "Lateral Movement", "Privilege Escalation"],
+    "hidden_objectives": ["Steal sensitive corporate documents", "Gain access to the internal network of the target company"],
+    "expected_findings": [
+        "Multiple failed login attempts in /var/log/auth.log",
+        "Suspicious network traffic from internal IPs to external servers",
+        "Presence of unauthorized SSH keys in critical servers",
+        "Elevated user permissions for an account not typically requiring high privilege"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "netstat -tulnp",
+        "ssh -vvv user@internal_IP",
+        "ls -l /home/user/",
+        "id -a",
+        "find / -user user -type f -exec ls -l {} \\;",
+        "strings /path/to/suspicious/file | grep ssh"
+    ],
+    "expected_root_cause": "An employee was tricked into revealing their credentials in a phishing email",
+    "expected_severity": "High",
+    "expected_mitigation": [
+        "Implement multi-factor authentication",
+        "Regular employee training on phishing and social engineering",
+        "Monitor network traffic for suspicious activities",
+        "Limit user privileges to the minimum necessary",
+        "Regularly audit and rotate sensitive credentials"
+    ]
+}

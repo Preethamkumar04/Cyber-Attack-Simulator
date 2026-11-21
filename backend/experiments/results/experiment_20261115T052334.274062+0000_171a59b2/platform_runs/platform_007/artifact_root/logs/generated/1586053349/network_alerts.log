@@ -1,0 +1,5 @@
+2026-11-15T05:25:14.119197 | IDS ALERT: Network scanning activity detected.
+2026-11-15T05:30:14.119197 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:35:14.119197 | EDR ALERT: Administrative privilege escalation detected.
+2026-11-15T05:40:14.119197 | FIREWALL ALERT: Large outbound data transfer detected to external host.
+2026-11-15T05:45:14.119197 | SECURITY ALERT: Suspicious persistence mechanism detected on target host.

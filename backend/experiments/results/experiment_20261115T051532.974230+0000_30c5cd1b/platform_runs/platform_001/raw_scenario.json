@@ -1,0 +1,31 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Privilege Escalation"
+  ],
+  "hidden_objectives": [
+    "Steal user credentials",
+    "Elevate privileges to administrator"
+  ],
+  "expected_findings": [
+    "Multiple failed login attempts from the same IP",
+    "Suspicious processes running with elevated privileges",
+    "Presence of unknown executables in system directories"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "ps aux | grep [executable_name]",
+    "ls -l /bin /sbin",
+    "sudo -l"
+  ],
+  "expected_root_cause": "Successful phishing attack leading to compromised user credentials",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Update and patch all systems",
+    "Regularly audit system directories for unknown executables"
+  ]
+}

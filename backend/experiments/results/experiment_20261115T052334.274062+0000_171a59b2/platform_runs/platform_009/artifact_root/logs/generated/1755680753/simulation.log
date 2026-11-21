@@ -1,0 +1,5 @@
+2026-11-15T05:25:44.725023 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:30:44.725023 | reconnaissance | IDS01 Port scanning activity detected against internal network.
+2026-11-15T05:35:44.725023 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:40:44.725023 | lateral_movement | FILE-SRV01 Remote SMB connection initiated from WS-004.
+2026-11-15T05:45:44.725023 | data_exfiltration | FW01 Large outbound data transfer detected to external host.

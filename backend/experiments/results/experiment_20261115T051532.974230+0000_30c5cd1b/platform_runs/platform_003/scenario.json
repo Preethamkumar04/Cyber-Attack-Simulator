@@ -1,0 +1,37 @@
+{
+  "scenario_id": "9f2e44fa-e848-4293-9276-49a821b26b74",
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Brute Force Attack",
+    "Access Compromise"
+  ],
+  "hidden_objectives": [
+    "Steal user credentials",
+    "Gain access to the corporate network"
+  ],
+  "expected_findings": [
+    "Failed login attempts in /var/log/auth.log",
+    "Account lockouts in /var/log/auth.log",
+    "Successful login with stolen credentials",
+    "Anomalous activity during non-business hours"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "netstat -tulnp",
+    "ssh -l <compromised_user> -i <phishing_key> <target_server>"
+  ],
+  "expected_root_cause": "Weak passwords and successful phishing attack",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Enforce strong password policies",
+    "Implement multi-factor authentication",
+    "Provide security awareness training",
+    "Monitor failed login attempts"
+  ],
+  "simulation_ready": true
+}

@@ -1,0 +1,39 @@
+{
+  "scenario_id": "1a038833-bc25-4fad-9b70-d47bcd154a9d",
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Password Brute Force",
+    "Account Takeover",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal user credentials",
+    "Gain access to sensitive data"
+  ],
+  "expected_findings": [
+    "Failed login attempts",
+    "Successful login from unusual IP",
+    "Suspicious file transfers",
+    "Unusual data access patterns"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "netstat -tulnp",
+    "ls -l /home/user/",
+    "find / -user user -type f -mtime 0"
+  ],
+  "expected_root_cause": "Weak passwords and compromised credentials",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Enforce password complexity and expiration policies",
+    "Monitor for and block brute force attacks",
+    "Regularly update and patch systems"
+  ],
+  "simulation_ready": true
+}

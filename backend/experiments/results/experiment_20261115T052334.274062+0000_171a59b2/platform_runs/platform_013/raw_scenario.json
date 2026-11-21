@@ -1,0 +1,37 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Initial Reconnaissance",
+    "Exploitation of Vulnerable Software",
+    "Backdoor Installation",
+    "Privilege Escalation",
+    "Data Exfiltration",
+    "Persistence"
+  ],
+  "hidden_objectives": [
+    "Steal sensitive corporate data",
+    "Maintain persistent access to the network"
+  ],
+  "expected_findings": [
+    "Unusual outbound traffic",
+    "Presence of unknown processes",
+    "Modified system files",
+    "Exfiltration of data to external IP addresses"
+  ],
+  "expected_commands": [
+    "netstat -tulnp",
+    "ps auxf | grep -i backdoor",
+    "ls -l /root/",
+    "grep -i data /root/",
+    "tcpdump -i eth0 -n -w output.pcap"
+  ],
+  "expected_root_cause": "Exploitation of an unpatched vulnerable software",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Apply patches for all vulnerable software",
+    "Implement network segmentation",
+    "Regularly monitor and analyze network traffic",
+    "Implement a strong incident response plan"
+  ]
+}

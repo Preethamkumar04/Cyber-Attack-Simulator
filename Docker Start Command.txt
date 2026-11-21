@@ -1,0 +1,27 @@
+# 1. Start Docker Desktop
+
+# 2. Go to project
+Set-Location "F:\Cyber_Attack_Simulator (cur)\Cyber_Attack_Simulator"
+
+# 3. Enable Docker mode
+$env:ATTACK_ENGINE="docker"
+$env:DOCKER_ENABLED="true"
+
+# 4. Start project
+docker compose up -d
+
+# 5. Verify
+Invoke-RestMethod http://localhost:8000/health
+
+# Expected:
+# healthy / docker / mistral
+
+# 6. Open browser
+http://localhost:3000
+
+f you change code before the presentation:
+docker compose up --build -d
+If you haven't changed anything:
+docker compose up -d
+
+That's it.

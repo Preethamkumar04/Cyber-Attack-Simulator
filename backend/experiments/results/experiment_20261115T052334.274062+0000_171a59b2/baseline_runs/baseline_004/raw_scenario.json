@@ -1,0 +1,30 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Password Cracking",
+    "Unauthorized Access"
+  ],
+  "hidden_objectives": [
+    "Steal user credentials",
+    "Gain access to the internal network"
+  ],
+  "expected_findings": [
+    "Suspicious login attempts",
+    "Account lockouts",
+    "Failed password entries"
+  ],
+  "expected_commands": [
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "cat /var/log/secure"
+  ],
+  "expected_root_cause": "Weak passwords used by employees",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement password policies enforcing strong passwords",
+    "Enable multi-factor authentication"
+  ]
+}

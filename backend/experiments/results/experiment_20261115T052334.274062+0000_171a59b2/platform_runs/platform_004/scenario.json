@@ -1,0 +1,41 @@
+{
+  "scenario_id": "5b3ff3cd-a940-4138-98b5-39c965622906",
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Password Brute-forcing",
+    "Account Takeover",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal employee credentials",
+    "Exfiltrate financial data"
+  ],
+  "expected_findings": [
+    "Failed login attempts in /var/log/auth.log",
+    "Multiple login failures from the same IP",
+    "Account with unusual activity",
+    "Unauthorized data transfer detected"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "grep -E 'Failed|Invalid|Incorrect' /var/log/auth.log",
+    "cat /home/user/.bash_history",
+    "grep 'ssh' /home/user/.bash_history",
+    "sudo cat /etc/passwd",
+    "sudo cat /etc/shadow"
+  ],
+  "expected_root_cause": "Weak password used by the targeted employee",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Educate employees on secure password practices",
+    "Regularly monitor and analyze login attempts",
+    "Enforce password complexity and expiration policies"
+  ],
+  "simulation_ready": true
+}

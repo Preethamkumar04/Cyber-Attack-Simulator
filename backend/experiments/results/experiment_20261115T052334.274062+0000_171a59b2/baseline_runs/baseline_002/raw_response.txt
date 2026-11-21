@@ -1,0 +1,32 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": [
+        "Recon",
+        "Port Scanning",
+        "Service Enumeration",
+        "Brute Force Attack",
+        "Credentials Gain"
+    ],
+    "hidden_objectives": [
+        "Gain access to the target system"
+    ],
+    "expected_findings": [
+        "Failed login attempts",
+        "Successful login from unusual IP",
+        "Unusual network traffic"
+    ],
+    "expected_commands": [
+        "grep 'Failed password' /var/log/auth.log",
+        "last",
+        "netstat -tulnp",
+        "ssh -v user@target_ip"
+    ],
+    "expected_root_cause": "Weak password",
+    "expected_severity": "Medium",
+    "expected_mitigation": [
+        "Enforce strong password policy",
+        "Disable unnecessary services",
+        "Monitor failed login attempts"
+    ]
+}

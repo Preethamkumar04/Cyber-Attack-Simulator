@@ -1,0 +1,96 @@
+/**
+ * pages/auth.css — login and registration page styles.
+ */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
+    var(--bg-primary);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-card__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: var(--accent-cyan);
+  text-align: center;
+}
+
+.auth-card__brand p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.auth-form input {
+  padding: 10px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+.auth-form__submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.auth-card__footer {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.auth-mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-mode-toggle button {
+  padding: 8px 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.auth-mode-toggle__active {
+  border-color: var(--accent-cyan) !important;
+  color: var(--accent-cyan) !important;
+  background: rgba(34, 211, 238, 0.1) !important;
+}

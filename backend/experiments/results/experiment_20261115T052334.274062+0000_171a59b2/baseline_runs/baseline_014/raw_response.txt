@@ -1,0 +1,37 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "ADVANCED",
+    "attack_chain": [
+        "Recon",
+        "Infiltration (Zero-Day Exploit)",
+        "Lateral Movement",
+        "Persistence (Rootkit Installation)",
+        "Data Exfiltration",
+        "Exit"
+    ],
+    "hidden_objectives": [
+        "Steal sensitive corporate data",
+        "Gain long-term access to the network"
+    ],
+    "expected_findings": [
+        "Failed login attempts",
+        "Unusual network traffic",
+        "Presence of unknown processes",
+        "Modified system files"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "netstat -tulnp",
+        "ps aux | grep [unknown_process]",
+        "ls -l /root",
+        "strings /path/to/rootkit"
+    ],
+    "expected_root_cause": "Successful exploitation of an unpatched zero-day vulnerability",
+    "expected_severity": "Critical",
+    "expected_mitigation": [
+        "Apply security patches promptly",
+        "Implement multi-factor authentication",
+        "Monitor for signs of lateral movement and data exfiltration",
+        "Regularly audit system files for unauthorized modifications"
+    ]
+}

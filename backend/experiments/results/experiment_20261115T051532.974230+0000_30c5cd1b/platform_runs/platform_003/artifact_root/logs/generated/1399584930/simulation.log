@@ -1,0 +1,4 @@
+2026-11-15T05:16:14.118834 | phishing | MAIL-GW01 Suspicious email received from attacker@fake-login.com targeting employee mailbox.
+2026-11-15T05:21:14.118834 | credential_access | AUTH-SRV01 Multiple failed login attempts detected for user j.smith.
+2026-11-15T05:26:14.118834 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:31:14.118834 | generic_attack | SYSTEM01 Suspicious activity detected.

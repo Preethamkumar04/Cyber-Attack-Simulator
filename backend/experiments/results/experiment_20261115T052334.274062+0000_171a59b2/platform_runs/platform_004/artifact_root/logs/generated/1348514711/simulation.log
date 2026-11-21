@@ -1,0 +1,5 @@
+2026-11-15T05:24:29.779076 | phishing | MAIL-GW01 Suspicious email received from attacker@fake-login.com targeting employee mailbox.
+2026-11-15T05:29:29.779076 | credential_access | AUTH-SRV01 Multiple failed login attempts detected for user j.smith.
+2026-11-15T05:34:29.779076 | credential_access | AUTH-SRV01 Multiple failed login attempts detected for user j.smith.
+2026-11-15T05:39:29.779076 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:44:29.779076 | data_exfiltration | FW01 Large outbound data transfer detected to external host.

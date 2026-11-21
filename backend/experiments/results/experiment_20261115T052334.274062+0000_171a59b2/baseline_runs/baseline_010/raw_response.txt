@@ -1,0 +1,35 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "INTERMEDIATE",
+    "attack_chain": ["Recon", "Email Phishing", "Credential Harvesting", "Lateral Movement", "Privilege Escalation", "Data Exfiltration"],
+    "hidden_objectives": ["Steal admin credentials", "Exfiltrate confidential research data"],
+    "expected_findings": [
+        "Suspicious email activity logs",
+        "Unusual login attempts",
+        "Multiple failed SSH login attempts",
+        "Unauthorized user activity in system logs",
+        "Elevated privileges granted to unauthorized account",
+        "Large amounts of data being transferred to an external IP"
+    ],
+    "expected_commands": [
+        "cat /var/log/maillog",
+        "grep 'phishing' /var/log/maillog",
+        "grep 'failed password' /var/log/auth.log",
+        "last",
+        "netstat -tulnp",
+        "sudo -l",
+        "grep 'sudo' /var/log/auth.log",
+        "ssh -i /path/to/suspicious_ssh_key user@target_server",
+        "ls -alh /path/to/suspicious_folder",
+        "tcpdump -i eth0 -w output.pcap"
+    ],
+    "expected_root_cause": "Successful phishing attack leading to unauthorized access and data exfiltration",
+    "expected_severity": "High",
+    "expected_mitigation": [
+        "Implement multi-factor authentication",
+        "Regularly update system and application software",
+        "Enforce least privilege principle",
+        "Monitor network traffic for unusual activity",
+        "Educate employees on phishing awareness"
+    ]
+}

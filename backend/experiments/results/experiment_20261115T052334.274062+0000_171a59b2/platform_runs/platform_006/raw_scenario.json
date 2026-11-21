@@ -1,0 +1,38 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Recon",
+    "Exploit Vulnerability",
+    "Initial Access",
+    "Lateral Movement",
+    "Privilege Escalation",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal sensitive company files",
+    "Gain persistent access to the network"
+  ],
+  "expected_findings": [
+    "Multiple failed SSH login attempts",
+    "Unusual network traffic from an internal IP",
+    "Processes running with elevated privileges",
+    "Encrypted outbound traffic on non-standard ports"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "ps aux | grep -i 'ssh'",
+    "sudo -l",
+    "tcpdump -i eth0 -n -w output.pcap"
+  ],
+  "expected_root_cause": "Exploitation of an unpatched vulnerability in an outdated software",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Regular software updates",
+    "Implementing strong authentication policies",
+    "Monitoring network traffic for anomalies",
+    "Investigating and removing any persistent malware"
+  ]
+}

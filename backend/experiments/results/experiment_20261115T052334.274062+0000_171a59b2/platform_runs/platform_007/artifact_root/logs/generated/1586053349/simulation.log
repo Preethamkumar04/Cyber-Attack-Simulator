@@ -1,0 +1,5 @@
+2026-11-15T05:25:14.119197 | reconnaissance | IDS01 Port scanning activity detected against internal network.
+2026-11-15T05:30:14.119197 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:35:14.119197 | privilege_escalation | DC01 Administrative privileges granted to unexpected account.
+2026-11-15T05:40:14.119197 | data_exfiltration | FW01 Large outbound data transfer detected to external host.
+2026-11-15T05:45:14.119197 | persistence | SYSTEM01 Suspicious activity detected.

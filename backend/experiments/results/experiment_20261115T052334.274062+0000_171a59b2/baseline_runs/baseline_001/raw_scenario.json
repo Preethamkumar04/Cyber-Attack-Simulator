@@ -1,0 +1,32 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Brute Force Attack",
+    "Account Takeover"
+  ],
+  "hidden_objectives": [
+    "Steal email credentials",
+    "Access corporate network"
+  ],
+  "expected_findings": [
+    "Multiple failed login attempts",
+    "Login successful from unknown IP",
+    "Suspicious activity in email account"
+  ],
+  "expected_commands": [
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "mailq",
+    "cat ~/.netrc"
+  ],
+  "expected_root_cause": "Weak password policies and phishing attack",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Educate users about phishing threats",
+    "Regularly review and revoke unnecessary permissions"
+  ]
+}

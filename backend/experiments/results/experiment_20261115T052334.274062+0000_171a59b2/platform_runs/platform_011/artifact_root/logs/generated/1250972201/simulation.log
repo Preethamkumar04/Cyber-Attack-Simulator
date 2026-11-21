@@ -1,0 +1,6 @@
+2026-11-15T05:26:19.502411 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:31:19.502411 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:36:19.502411 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:41:19.502411 | lateral_movement | FILE-SRV01 Remote SMB connection initiated from WS-004.
+2026-11-15T05:46:19.502411 | privilege_escalation | DC01 Administrative privileges granted to unexpected account.
+2026-11-15T05:51:19.502411 | data_exfiltration | FW01 Large outbound data transfer detected to external host.

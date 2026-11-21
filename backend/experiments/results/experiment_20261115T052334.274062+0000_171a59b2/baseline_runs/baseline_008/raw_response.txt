@@ -1,0 +1,11 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "INTERMEDIATE",
+    "attack_chain": ["Recon", "Phishing", "Credential Harvesting", "Lateral Movement", "Privilege Escalation", "Data Exfiltration"],
+    "hidden_objectives": ["Steal admin credentials", "Exfiltrate sensitive files"],
+    "expected_findings": ["Failed login attempts", "Login history with successful phishing emails", "Credentials found in stolen files", "Suspicious network traffic", "Sensitive files missing from backup"],
+    "expected_commands": ["cat /var/log/auth.log", "grep 'Failed password' /var/log/auth.log", "last", "netstat -tulnp", "ls -la /home/user/.ssh", "cat /home/user/.ssh/known_hosts"],
+    "expected_root_cause": "Phishing email containing a malicious link led to a compromised RDP connection",
+    "expected_severity": "High",
+    "expected_mitigation": ["Enforce multi-factor authentication", "Regularly backup sensitive files", "Educate users on phishing awareness", "Patch RDP vulnerabilities", "Monitor network traffic for unusual activity"]
+}

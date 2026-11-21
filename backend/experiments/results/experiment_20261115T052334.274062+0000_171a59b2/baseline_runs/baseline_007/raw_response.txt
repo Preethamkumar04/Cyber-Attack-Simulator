@@ -1,0 +1,41 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "INTERMEDIATE",
+    "attack_chain": [
+        "Recon",
+        "Email Phishing",
+        "Credentials Harvesting",
+        "Lateral Movement",
+        "Privilege Escalation",
+        "Data Exfiltration"
+    ],
+    "hidden_objectives": [
+        "Steal admin credentials",
+        "Gain access to the financial database"
+    ],
+    "expected_findings": [
+        "Successful login attempts from multiple IP addresses",
+        "Suspicious network traffic to known malicious IPs",
+        "Presence of unknown processes or services",
+        "Modified system files or registry keys",
+        "Unusual data transfer activity"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "netstat -tulnp",
+        "ps aux",
+        "ls -lah /root",
+        "grep -R 'base64' /",
+        "tcpdump -i eth0 -n -v -vv"
+    ],
+    "expected_root_cause": "A compromised user account was used to gain initial access, and then laterally move and escalate privileges within the network",
+    "expected_severity": "High",
+    "expected_mitigation": [
+        "Implement multi-factor authentication",
+        "Regularly update and patch all systems",
+        "Limit lateral movement with micro-segmentation",
+        "Monitor for and block known malicious IPs",
+        "Encrypt sensitive data at rest and in transit"
+    ]
+}

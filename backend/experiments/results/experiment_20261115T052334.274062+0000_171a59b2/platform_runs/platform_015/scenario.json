@@ -1,0 +1,43 @@
+{
+  "scenario_id": "c3b58dad-2a7e-4d86-8eb1-a3ca356d52c2",
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Recon",
+    "Spear Phishing",
+    "Initial Access",
+    "Lateral Movement",
+    "Privilege Escalation",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal confidential project blueprints",
+    "Achieve persistent access to the network"
+  ],
+  "expected_findings": [
+    "Unusual network traffic patterns",
+    "Multiple failed SSH login attempts",
+    "Executables and scripts with encoded payloads",
+    "Suspicious process activity",
+    "Modified system files and registry keys"
+  ],
+  "expected_commands": [
+    "netstat -tulnp",
+    "grep 'Failed password' /var/log/auth.log",
+    "ls -la /root/",
+    "strings /root/bin/script",
+    "ps auxf | grep -v grep",
+    "diff /etc/passwd /etc/passwd.bak",
+    "cat /var/log/syslog | grep -i 'encoded payload'"
+  ],
+  "expected_root_cause": "Unsecured RDP connection and employee falling for a spear-phishing email",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Enforce multi-factor authentication for RDP",
+    "Implement email security training for employees",
+    "Regularly review and analyze system logs",
+    "Implement a network segmentation strategy",
+    "Install and update antivirus software on all systems"
+  ],
+  "simulation_ready": true
+}

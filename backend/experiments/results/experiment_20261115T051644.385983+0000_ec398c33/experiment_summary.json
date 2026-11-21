@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-11-15T05:17:30.986065+00:00",
+  "platform": {
+    "overall": {
+      "requested_runs": 15,
+      "first_attempt_validity_rate_percent": 0.0,
+      "final_structural_validity_rate_percent": 0.0,
+      "retry_recovery_rate_percent": 0.0,
+      "final_generation_failure_rate_percent": 100.0,
+      "mean_attempts_per_run": 3,
+      "generation_time_ms": {
+        "mean": 3074.27,
+        "median": 3075.511,
+        "stddev": 17.497
+      },
+      "mean_attack_chain_length": null,
+      "duplicate_chain_rate_percent": null,
+      "artifact_file_presence_rate_percent": null,
+      "non_empty_artifact_rate_percent": null,
+      "complete_artifact_rate_percent": null
+    },
+    "by_difficulty": {
+      "BEGINNER": {
+        "requested_runs": 5,
+        "first_attempt_validity_rate_percent": 0.0,
+        "final_structural_validity_rate_percent": 0.0,
+        "retry_recovery_rate_percent": 0.0,
+        "final_generation_failure_rate_percent": 100.0,
+        "mean_attempts_per_run": 3,
+        "generation_time_ms": {
+          "mean": 3082.431,
+          "median": 3081.239,
+          "stddev": 15.775
+        },
+        "mean_attack_chain_length": null,
+        "duplicate_chain_rate_percent": null,
+        "artifact_file_presence_rate_percent": null,
+        "non_empty_artifact_rate_percent": null,
+        "complete_artifact_rate_percent": null
+      },
+      "INTERMEDIATE": {
+        "requested_runs": 5,
+        "first_attempt_validity_rate_percent": 0.0,
+        "final_structural_validity_rate_percent": 0.0,
+        "retry_recovery_rate_percent": 0.0,
+        "final_generation_failure_rate_percent": 100.0,
+        "mean_attempts_per_run": 3,
+        "generation_time_ms": {
+          "mean": 3077.534,
+          "median": 3075.511,
+          "stddev": 16.342
+        },
+        "mean_attack_chain_length": null,
+        "duplicate_chain_rate_percent": null,
+        "artifact_file_presence_rate_percent": null,
+        "non_empty_artifact_rate_percent": null,
+        "complete_artifact_rate_percent": null
+      },
+      "ADVANCED": {
+        "requested_runs": 5,
+        "first_attempt_validity_rate_percent": 0.0,
+        "final_structural_validity_rate_percent": 0.0,
+        "retry_recovery_rate_percent": 0.0,
+        "final_generation_failure_rate_percent": 100.0,
+        "mean_attempts_per_run": 3,
+        "generation_time_ms": {
+          "mean": 3062.844,
+          "median": 3059.43,
+          "stddev": 13.954
+        },
+        "mean_attack_chain_length": null,
+        "duplicate_chain_rate_percent": null,
+        "artifact_file_presence_rate_percent": null,
+        "non_empty_artifact_rate_percent": null,
+        "complete_artifact_rate_percent": null
+      }
+    }
+  },
+  "baseline": {
+    "runs": 15,
+    "external_validity_rate_percent": 0.0,
+    "platform_first_attempt_validity_rate_percent": 0.0,
+    "comparison": "Both values use the same external evaluator on raw first-response JSON; the baseline receives no platform parsing recovery, retries, schema construction, or ScenarioBuilder validation."
+  },
+  "limitations": [
+    "Structural validity and artifact completeness do not establish attack realism, technical feasibility, or training effectiveness.",
+    "The platform records a UUID but does not guarantee semantic scenario uniqueness; duplicate detection is exact normalized attack-chain matching only.",
+    "Ollama metadata is exported only when the server returns it."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Recon",
+    "Exploit Vulnerability",
+    "Gain Initial Access",
+    "Lateral Movement",
+    "Privilege Escalation",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal company financial data",
+    "Maintain persistent access for future attacks"
+  ],
+  "expected_findings": [
+    "Increased failed login attempts on a specific server",
+    "Unusual network traffic patterns",
+    "Suspicious processes running on compromised hosts",
+    "Modified system files and registry entries",
+    "Files with unusual timestamps or sizes in the data directory"
+  ],
+  "expected_commands": [
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "ps aux",
+    "strings /proc/<pid>/exe | grep elf",
+    "cat /var/log/syslog | grep -E '(ssh|scp|sftp|rdp)'",
+    "ls -lah /data/*",
+    "find / -name 'config.db' -type f -mtime 0"
+  ],
+  "expected_root_cause": "Exploitation of a known, unpatched vulnerability in an outdated web application",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Apply security patches promptly",
+    "Implement least privilege principles",
+    "Implement network segmentation",
+    "Monitor and alert on unusual network traffic patterns",
+    "Regularly backup and verify system and data integrity"
+  ]
+}

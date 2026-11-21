@@ -1,0 +1,40 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Initial Foothold",
+    "Lateral Movement",
+    "Persistence",
+    "Data Exfiltration",
+    "Command and Control"
+  ],
+  "hidden_objectives": [
+    "Steal sensitive corporate data",
+    "Gain persistent access to the network"
+  ],
+  "expected_findings": [
+    "Failed SSH login attempts with multiple IPs",
+    "Presence of unknown processes consuming resources",
+    "Unusual network traffic to external IPs",
+    "Sensitive files missing or modified",
+    "Presence of unauthorized scripts in key system directories"
+  ],
+  "expected_commands": [
+    "grep 'Failed password' /var/log/auth.log",
+    "ps auxf | grep -v grep",
+    "netstat -tulnp",
+    "ls -lah /",
+    "grep -R 'base64' /",
+    "strings /path/to/suspicious/script"
+  ],
+  "expected_root_cause": "Initial compromise through a zero-day exploit followed by data exfiltration and the establishment of a C2 channel",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Apply security patches",
+    "Implement network segmentation",
+    "Monitor for unusual network activity",
+    "Regularly review and monitor system logs",
+    "Enforce strict access controls",
+    "Implement strong endpoint protection"
+  ]
+}

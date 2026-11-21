@@ -1,0 +1,6 @@
+2026-11-15T05:24:57.148076 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:29:57.148076 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:34:57.148076 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:39:57.148076 | IDS ALERT: Suspicious SMB lateral movement activity detected.
+2026-11-15T05:44:57.148076 | EDR ALERT: Administrative privilege escalation detected.
+2026-11-15T05:49:57.148076 | FIREWALL ALERT: Large outbound data transfer detected to external host.

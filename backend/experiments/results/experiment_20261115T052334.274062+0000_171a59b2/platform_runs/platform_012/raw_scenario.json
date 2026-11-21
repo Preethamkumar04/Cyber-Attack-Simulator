@@ -1,0 +1,42 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Initial Access (Web Application Exploit)",
+    "Establish Foothold (Shellcode Injection)",
+    "Lateral Movement (SMB Relay)",
+    "Privilege Escalation (Exploiting Kernel Vulnerability)",
+    "Data Exfiltration (SSH Tunnel Setup)",
+    "Cover Tracks (Remove System Logs)"
+  ],
+  "hidden_objectives": [
+    "Steal proprietary source code",
+    "Gain access to the internal network for long-term persistence"
+  ],
+  "expected_findings": [
+    "Failed login attempts on the web application",
+    "New user account creation",
+    "Established connections using SMB",
+    "Elevated privileges for a specific user",
+    "Unusual SSH traffic",
+    "Missing or altered system logs"
+  ],
+  "expected_commands": [
+    "grep 'Failed login' /var/log/auth.log",
+    "last",
+    "netstat -tulnp",
+    "sudo -l",
+    "netstat -antp | grep ssh",
+    "ls -la /var/log",
+    "cat /var/log/syslog"
+  ],
+  "expected_root_cause": "Exploitation of an unpatched kernel vulnerability",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Apply the missing kernel patch",
+    "Implement multi-factor authentication for web applications",
+    "Monitor for and block SMB relay attacks",
+    "Regularly audit and monitor system logs",
+    "Enforce least privilege principle"
+  ]
+}

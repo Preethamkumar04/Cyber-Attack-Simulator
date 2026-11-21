@@ -1,0 +1,43 @@
+PHASE 1 ✅
+        ↓
+Nemotron / previous model
+
+PHASE 2 ✅
+        ↓
+Nemotron / previous model
+
+PHASE 3
+        ↓
+GLM-5.1 Cloud
+
+PHASE 4
+        ↓
+Qwen3-Coder 480B Cloud
+
+PHASE 5
+        ↓
+GPT-OSS 120B Cloud
+
+PHASE 6
+        ↓
+DeepSeek V4 Pro Cloud
+
+PHASE 7
+        ↓
+Kimi K2.7-Code
+
+PHASE 8
+        ↓
+MiniMax M2.7
+
+PHASE 9
+        ↓
+Nemotron-3-Ultra ⭐
+        ↓
+PHASE 10
+        ↓
+DeepSeek V4 Pro
+        ↓
+FINAL AUDIT
+        ↓
+Kimi K3 / Nemotron

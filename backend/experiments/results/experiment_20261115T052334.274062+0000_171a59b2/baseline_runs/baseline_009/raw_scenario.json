@@ -1,0 +1,41 @@
+{
+  "attack_mode": "hybrid",
+  "difficulty": "INTERMEDIATE",
+  "attack_chain": [
+    "Recon",
+    "Phishing",
+    "Initial Access",
+    "Lateral Movement",
+    "Privilege Escalation",
+    "Data Exfiltration"
+  ],
+  "hidden_objectives": [
+    "Steal admin credentials",
+    "Exfiltrate financial data"
+  ],
+  "expected_findings": [
+    "Multiple failed SSH login attempts",
+    "New user account created with suspicious activity",
+    "Network traffic to known malicious IP addresses",
+    "Suspicious process running with elevated privileges",
+    "Unauthorized data transfer detected"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "netstat -tulnp",
+    "ps aux | grep -i shell",
+    "sudo -l",
+    "tar -tf /path/to/suspicious/file"
+  ],
+  "expected_root_cause": "Successful phishing attack resulting in user credential theft",
+  "expected_severity": "High",
+  "expected_mitigation": [
+    "Enable multi-factor authentication",
+    "Implement user awareness training",
+    "Regularly audit and review system logs",
+    "Limit user privileges and network access",
+    "Install antivirus software and keep it updated"
+  ]
+}

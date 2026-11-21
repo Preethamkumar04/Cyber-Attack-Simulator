@@ -1,0 +1,40 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "ADVANCED",
+    "attack_chain": [
+        "Recon",
+        "Web Application Exploitation",
+        "Reverse Shell",
+        "Lateral Movement",
+        "Data Exfiltration",
+        "Cover-up"
+    ],
+    "hidden_objectives": [
+        "Steal company's intellectual property",
+        "Install a persistent backdoor"
+    ],
+    "expected_findings": [
+        "Increased failed login attempts",
+        "Unusual network traffic patterns",
+        "Executable files in unexpected locations",
+        "Encrypted data being sent out of the network"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "netstat -tulnp",
+        "find / -type f -exec md5sum {} \\; | sort | uniq -c | sort -nr | head -10",
+        "tcpdump -i eth0 -w output.pcap",
+        "strings -a output.pcap | grep 'bash' | grep -v '/bin/bash'",
+        "grep -iR 'base64' /",
+        "ss -la"
+    ],
+    "expected_root_cause": "Exploitation of an unpatched vulnerability in a popular web application",
+    "expected_severity": "Critical",
+    "expected_mitigation": [
+        "Apply security patches promptly",
+        "Implement a web application firewall",
+        "Regularly back up sensitive data",
+        "Monitor network traffic for unusual activity"
+    ]
+}

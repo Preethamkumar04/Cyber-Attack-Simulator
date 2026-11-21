@@ -1,0 +1,5 @@
+2026-11-15T05:24:42.548373 | EMAIL-GW ALERT: Suspicious email communication detected.
+2026-11-15T05:29:42.548373 | SIEM ALERT: Multiple failed authentication attempts followed by successful login.
+2026-11-15T05:34:42.548373 | SIEM ALERT: Multiple failed authentication attempts followed by successful login.
+2026-11-15T05:39:42.548373 | SECURITY ALERT: Suspicious activity observed.
+2026-11-15T05:44:42.548373 | FIREWALL ALERT: Large outbound data transfer detected to external host.

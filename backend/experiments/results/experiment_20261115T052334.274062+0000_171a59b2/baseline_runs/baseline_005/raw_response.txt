@@ -1,0 +1,27 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": ["Phishing", "Credential Harvesting", "Password Cracking", "System Compromise"],
+    "hidden_objectives": ["Steal user credentials", "Gain access to restricted files"],
+    "expected_findings": [
+        "Credentials found in phishing email",
+        "Credentials found in captured password list",
+        "Failed login attempts in /var/log/auth.log",
+        "Unauthorized SSH connection from suspicious IP"
+    ],
+    "expected_commands": [
+        "cat email.txt",
+        "grep 'Failed password' /var/log/auth.log",
+        "last",
+        "netstat -tulnp",
+        "sshd -l"
+    ],
+    "expected_root_cause": "Weak password and compromised user credentials",
+    "expected_severity": "Medium",
+    "expected_mitigation": [
+        "Change the compromised account's password",
+        "Implement password policy",
+        "Enable Multi-Factor Authentication",
+        "Monitor for suspicious login attempts"
+    ]
+}

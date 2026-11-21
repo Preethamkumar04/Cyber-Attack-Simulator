@@ -1,0 +1,11 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": ["Recon", "Phishing", "Credential Harvesting"],
+    "hidden_objectives": ["Steal employee email credentials"],
+    "expected_findings": ["Multiple failed login attempts in /var/log/auth.log", "Suspicious email with attachments in employee inbox"],
+    "expected_commands": ["cat /var/log/auth.log", "grep 'Failed password' /var/log/auth.log", "mailq", "grep -i 'exe' /var/mail/*"],
+    "expected_root_cause": "Phishing attack on employees",
+    "expected_severity": "Medium",
+    "expected_mitigation": ["Implement multi-factor authentication", "Provide phishing awareness training for employees"]
+}

@@ -1,0 +1,34 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Phishing",
+    "Credential Harvesting",
+    "Unauthorized Access"
+  ],
+  "hidden_objectives": [
+    "Steal employee credentials",
+    "Access company network"
+  ],
+  "expected_findings": [
+    "Credentials found in phishing email attachments",
+    "Multiple failed login attempts in /var/log/auth.log",
+    "Unusual login activity from foreign IP",
+    "Successful login at unusual time"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "netstat -tulnp",
+    "grep <employee_email> /var/log/auth.log"
+  ],
+  "expected_root_cause": "Weak employee credentials used in phishing scam",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Provide phishing awareness training",
+    "Regularly update and patch systems",
+    "Monitor for failed login attempts"
+  ]
+}

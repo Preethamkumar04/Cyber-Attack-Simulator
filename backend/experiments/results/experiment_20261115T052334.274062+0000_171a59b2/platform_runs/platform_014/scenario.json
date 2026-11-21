@@ -1,0 +1,40 @@
+{
+  "scenario_id": "4bf5f831-4604-4696-a074-38586784ca54",
+  "attack_mode": "hybrid",
+  "difficulty": "ADVANCED",
+  "attack_chain": [
+    "Initial Compromise (RCE in web application)",
+    "Persistence (Install Backdoor)",
+    "Lateral Movement (SMB Relay)",
+    "Privilege Escalation (Exploit Kernel Vulnerability)",
+    "Data Exfiltration (Transfer Data via Tor)",
+    "Cover Tracks (Delete Logs)"
+  ],
+  "hidden_objectives": [
+    "Steal admin credentials",
+    "Exfiltrate customer database"
+  ],
+  "expected_findings": [
+    "Multiple failed login attempts",
+    "Suspicious network traffic to known malicious IPs",
+    "Unusual process running with elevated privileges",
+    "Missing or altered system logs"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "netstat -tulnp",
+    "ps auxf | grep -i [process_name]",
+    "find / -name '*[process_name]*' 2>/dev/null",
+    "grep 'Error' /var/log/syslog"
+  ],
+  "expected_root_cause": "Unpatched kernel vulnerability exploited for privilege escalation",
+  "expected_severity": "Critical",
+  "expected_mitigation": [
+    "Apply latest patches",
+    "Monitor for unusual network traffic",
+    "Implement multi-factor authentication",
+    "Regularly review and secure system logs"
+  ],
+  "simulation_ready": true
+}

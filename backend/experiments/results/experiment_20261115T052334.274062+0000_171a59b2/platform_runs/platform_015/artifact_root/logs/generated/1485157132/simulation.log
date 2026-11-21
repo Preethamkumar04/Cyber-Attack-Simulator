@@ -1,0 +1,6 @@
+2026-11-15T05:27:31.551785 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:32:31.551785 | phishing | MAIL-GW01 Suspicious email received from attacker@fake-login.com targeting employee mailbox.
+2026-11-15T05:37:31.551785 | generic_attack | SYSTEM01 Suspicious activity detected.
+2026-11-15T05:42:31.551785 | lateral_movement | FILE-SRV01 Remote SMB connection initiated from WS-004.
+2026-11-15T05:47:31.551785 | privilege_escalation | DC01 Administrative privileges granted to unexpected account.
+2026-11-15T05:52:31.551785 | data_exfiltration | FW01 Large outbound data transfer detected to external host.

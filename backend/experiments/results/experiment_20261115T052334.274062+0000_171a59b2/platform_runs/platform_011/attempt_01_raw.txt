@@ -1,0 +1,31 @@
+{
+    "attack_mode": "hybrid",
+    "difficulty": "ADVANCED",
+    "attack_chain": ["Recon", "Initial_Exploitation", "Foothold", "Lateral_Movement", "Privilege_Escalation", "Data_Exfiltration"],
+    "hidden_objectives": ["Steal proprietary R&D data", "Persist within the network for future attacks"],
+    "expected_findings": [
+        "Suspicious network scanning activity in logs",
+        "Unusual SSH login attempts",
+        "Presence of unknown processes",
+        "Elevated user privileges for certain accounts",
+        "Unusual network traffic to external IP addresses",
+        "Large data transfers from sensitive directories"
+    ],
+    "expected_commands": [
+        "grep 'sshd' /var/log/auth.log",
+        "ps auxf | grep -v grep",
+        "last",
+        "netstat -tulnp",
+        "ls -la /root/",
+        "tcpdump -ni eth0 -w output.pcap"
+    ],
+    "expected_root_cause": "Zero-day exploitation of an unpatched server",
+    "expected_severity": "Critical",
+    "expected_mitigation": [
+        "Apply the missing security patch",
+        "Change all passwords for compromised accounts",
+        "Investigate and remove any malicious processes or files",
+        "Analyze network traffic for signs of ongoing data exfiltration",
+        "Implement multi-factor authentication for all users"
+    ]
+}

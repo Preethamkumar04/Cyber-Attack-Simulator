@@ -1,0 +1,30 @@
+{
+  "attack_mode": "active",
+  "difficulty": "BEGINNER",
+  "attack_chain": [
+    "Recon",
+    "Phishing",
+    "Credential Harvesting"
+  ],
+  "hidden_objectives": [
+    "Steal employee email credentials"
+  ],
+  "expected_findings": [
+    "Suspicious login attempts in /var/log/auth.log",
+    "Multiple failed login attempts in a short period",
+    "Successful login with an unusual IP address"
+  ],
+  "expected_commands": [
+    "cat /var/log/auth.log",
+    "grep 'Failed password' /var/log/auth.log",
+    "last",
+    "grep -i 'employee_email@example.com' /home/*/.netrc"
+  ],
+  "expected_root_cause": "Employee fell for a phishing email",
+  "expected_severity": "Medium",
+  "expected_mitigation": [
+    "Implement multi-factor authentication",
+    "Conduct regular security awareness training for employees",
+    "Enforce strong password policies"
+  ]
+}

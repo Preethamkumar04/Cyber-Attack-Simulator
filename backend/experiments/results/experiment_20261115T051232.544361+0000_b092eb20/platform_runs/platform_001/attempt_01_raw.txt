@@ -1,0 +1,24 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": ["Recon", "Phishing", "Credential Harvesting"],
+    "hidden_objectives": ["Steal email credentials"],
+    "expected_findings": [
+        "Multiple failed login attempts from various IPs",
+        "Login attempts with the same username and different passwords",
+        "Successful login from an unexpected location"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "last",
+        "grep -i 'email.com' /home/*/.netrc"
+    ],
+    "expected_root_cause": "A phishing email lured the user to enter their email credentials in a fake login page",
+    "expected_severity": "Medium",
+    "expected_mitigation": [
+        "Implement multi-factor authentication",
+        "Educate users about phishing emails",
+        "Monitor login attempts for unusual activity"
+    ]
+}

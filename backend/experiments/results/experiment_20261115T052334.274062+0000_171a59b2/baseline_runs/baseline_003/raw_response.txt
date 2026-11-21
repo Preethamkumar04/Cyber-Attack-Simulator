@@ -1,0 +1,28 @@
+{
+    "attack_mode": "active",
+    "difficulty": "BEGINNER",
+    "attack_chain": ["Phishing", "Credential Harvesting", "Password Cracking", "Privilege Escalation"],
+    "hidden_objectives": ["Steal user credentials", "Gain root access"],
+    "expected_findings": [
+        "Failed login attempts found in /var/log/auth.log",
+        "User password found in /home/user/.credentials.txt",
+        "Sudo history shows root access",
+        "Strange process running with high privileges"
+    ],
+    "expected_commands": [
+        "cat /var/log/auth.log",
+        "grep 'Failed password' /var/log/auth.log",
+        "cat /home/user/.credentials.txt",
+        "sudo -l",
+        "ps aux | grep root",
+        "netstat -tulnp"
+    ],
+    "expected_root_cause": "Weak user password",
+    "expected_severity": "Medium",
+    "expected_mitigation": [
+        "Implement password policy",
+        "Revoke and reset user passwords",
+        "Audit sudo permissions",
+        "Install intrusion detection system"
+    ]
+}
